@@ -1,0 +1,5 @@
+package com.example.coursify.view;
+
+public abstract class MainActivityHoldingFragment extends Fragment {
+
+}

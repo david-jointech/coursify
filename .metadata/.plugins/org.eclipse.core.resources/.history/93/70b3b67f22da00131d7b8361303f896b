@@ -1,0 +1,27 @@
+package com.example.coursify.view;
+
+import java.util.ArrayList;
+
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import com.example.coursify.LecturesFragment;
+import com.example.coursify.R;
+import com.example.coursify.model.Lecture;
+
+public class MyLecturesFragment extends LecturesFragment {
+
+	private final ArrayList<Lecture> myLectures = getMain().getCurrentUser()
+			.getLectures();
+
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		View view = inflater.inflate(R.layout.fragment_my_lectures, container,
+				false);
+		return view;
+	}
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array
+        name="menu_entries">
+        <item name="my_lectures_item">Meine Vorlesungen</item>
+        <item name="lectures_item">Vorlesungen Hinzufügen</item>
+        <item name="settings_item">Einstellungen</item>
+    </string-array>
+</resources>
+

@@ -1,0 +1,31 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id?="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/fragment1" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="content bla..." />
+    </FrameLayout>
+
+    <fragment
+        android:id="@+id/fragment1"
+        android:name="com.example.coursify.MainMenuActivity"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:layout_centerHorizontal="true"
+        tools:layout="@layout/fragment_main_menu" />
+
+</android.support.v4.widget.DrawerLayout>

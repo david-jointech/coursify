@@ -1,0 +1,13 @@
+package com.example.coursify;
+
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+
+public class LecturesFragment extends Fragment {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.fragment_lectures);
+	}
+}

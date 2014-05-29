@@ -1,0 +1,17 @@
+1399894897177	Delete element
+1399894923934	Delete element
+1399897545435	Delete element
+1399897550623	Delete element
+1399897557039	Delete element
+1399897558768	Delete element
+1399897687727	Delete element
+1399899156302	Rename resource 'fragment_main.xml'
+1399900651103	Rename type 'MyLectures'
+1399900670626	Rename type 'MainMenuActivity'
+1399900894548	Delete element
+1399901412170	Move compilation units
+1399901695118	Delete element
+1399905830486	Delete element
+1399932265985	Encapsulate field 'lectures'
+1399932320430	Encapsulate field 'currentUser'
+1399932534633	Encapsulate field 'name'

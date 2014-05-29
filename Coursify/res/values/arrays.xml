@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array
+        name="menu_entries">
+        <item>Meine Vorlesungen</item>
+        <item>Vorlesungen Hinzufügen</item>
+        <item>Einstellungen</item>
+    </string-array>
+    <string-array
+        name="test_entries">
+        <item>Kommentar 1</item>
+        <item>Kommentar 2</item>
+        <item>Kommentar 3</item>
+    </string-array>
+</resources>
+

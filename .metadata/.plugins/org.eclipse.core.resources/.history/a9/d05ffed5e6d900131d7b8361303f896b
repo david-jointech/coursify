@@ -1,0 +1,8 @@
+package com.example.coursify.view;
+
+public class FragmentSwitcher {
+
+	public static <T extends Fragment> void switchToFragment(T destination) {
+
+	}
+}

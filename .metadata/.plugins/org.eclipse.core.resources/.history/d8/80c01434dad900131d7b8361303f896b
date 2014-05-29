@@ -1,0 +1,10 @@
+package com.example.coursify.model;
+
+import java.util.Date;
+
+public class Lecture {
+	private String name;
+	private String description;
+	private Professor lecturer;
+	private Date 
+}

@@ -1,0 +1,19 @@
+package com.example.coursify.view;
+
+public class FragmentSwitcher {
+	private static FragmentSwitcher fragmentSwitcher;
+	private static MainActivity activity;
+
+	private FragmentSwitcher(MainActivity activity) {
+		fragmentSwitcher = this;
+		this.activity = activity;
+	}
+
+	public static FragmentSwitcher getInstance(MainActivity activity) {
+		if (fragmentSwitcher == null) {
+			return new FragmentSwitcher(MainActivity activity);
+		} else {
+			return fragmentSwitcher;
+		}
+	}
+}
