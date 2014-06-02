@@ -1,8 +1,0 @@
-INDEX VERSION 1.126+/home/david/dev/Uni/Software_Engineering/.metadata/.plugins/org.eclipse.jdt.core
-4058085822.index
-2222246647.index
-2644669799.index
-608134547.index
-3956275648.index
-211671907.index
-1270315800.index
