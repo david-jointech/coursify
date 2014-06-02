@@ -34,17 +34,18 @@ public class MyLecturesFragment extends LecturesFragment {
 		for (Lecture lecture : mockLectures()) {
 			values.add((String) lecture.getName());
 		}
-		final StableArrayAdapter adapter = new StableArrayAdapter(getMain(),
-				android.R.layout.simple_list_item_1, values);
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(getMain(),
+				R.layout.course_list_item, R.id.course_name, values);
 		mListView.setAdapter(adapter);
 		mListView.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
+				getMain().setMTitle(mockLectures().get(position).getName());
 				FragmentSwitcher.switchToFragment(new LectureFragment(),
 						getMain());
-
+				getMain().initializeComments();
 			}
 
 		});

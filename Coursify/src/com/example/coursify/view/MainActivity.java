@@ -11,6 +11,8 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import com.example.coursify.R;
 import com.example.coursify.model.Lecture;
@@ -33,6 +35,7 @@ public class MainActivity extends ActionBarActivity {
 		mockCurrentUser();
 
 		initializeDrawer();
+		initializeMenu();
 
 		mTitle = "Meine Vorlesungen";
 	}
@@ -52,7 +55,7 @@ public class MainActivity extends ActionBarActivity {
 		mDrawerTitle = "Menü";
 
 		mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
-				R.drawable.ic_launcher, 0, 0) {
+				R.drawable.ic_navigation_drawer, 0, 0) {
 
 			/** Called when a drawer has settled in a completely closed state. */
 			@Override
@@ -78,6 +81,29 @@ public class MainActivity extends ActionBarActivity {
 
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 		getActionBar().setHomeButtonEnabled(true);
+	}
+
+	private void initializeMenu() {
+		ListView menuItemsList = (ListView) this
+				.findViewById(R.id.menu_items_list);
+		String[] listItems = getResources()
+				.getStringArray(R.array.menu_entries);
+
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+				R.layout.menu_list_item, R.id.list_content, listItems);
+
+		menuItemsList.setAdapter(adapter);
+	}
+
+	public void initializeComments() {
+		ListView commentList = (ListView) this.findViewById(R.id.comment_list);
+		String[] listItems = { "Hans Dampf", "Mann Mustermax",
+				"xXOvGU_Student98Xx" };
+
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+				R.layout.comment_list_item, R.id.comment_name, listItems);
+		if (commentList != null)
+			commentList.setAdapter(adapter);
 	}
 
 	@Override
@@ -111,6 +137,7 @@ public class MainActivity extends ActionBarActivity {
 
 	public void setMTitle(CharSequence mTitle) {
 		this.mTitle = mTitle;
+		getActionBar().setTitle(this.mTitle);
 	}
 
 	public User getCurrentUser() {
@@ -118,7 +145,7 @@ public class MainActivity extends ActionBarActivity {
 	}
 
 	public void mockCurrentUser() {
-		User user = new User();
+		currentUser = new User();
 		ArrayList<Lecture> lectures = new ArrayList<Lecture>();
 		lectures.add(new Lecture("Vorlesung 1"));
 		lectures.add(new Lecture("Vorlesung 2"));
@@ -127,6 +154,6 @@ public class MainActivity extends ActionBarActivity {
 		lectures.add(new Lecture("Vorlesung 5"));
 		lectures.add(new Lecture("Vorlesung 6"));
 		lectures.add(new Lecture("Vorlesung 7"));
-		user.setLectures(lectures);
+		currentUser.setLectures(lectures);
 	}
 }
