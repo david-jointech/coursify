@@ -52,7 +52,6 @@ public class MainMenuFragment extends MainActivityHoldingFragment {
 	}
 
 	private void initializeMenuItemsList(ListView menuItemsList) {
-
 		menuItemsList.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
@@ -65,19 +64,19 @@ public class MainMenuFragment extends MainActivityHoldingFragment {
 				}
 				switch (position) {
 				case 0:
-					view.setBackgroundColor(0xFF888888);
+					view.setBackgroundColor(0xFF666666);
 					getMain().setMTitle("Meine Vorlesungen");
 					FragmentSwitcher.switchToFragment(new MyLecturesFragment(),
 							getMain());
 
 					break;
 				case 1:
-					view.setBackgroundColor(0xFF888888);
+					view.setBackgroundColor(0xFF666666);
 					FragmentSwitcher.switchToFragment(new LectureFragment(),
 							getMain());
 					break;
 				case 2:
-					view.setBackgroundColor(0xFF888888);
+					view.setBackgroundColor(0xFF666666);
 
 					break;
 				default:
