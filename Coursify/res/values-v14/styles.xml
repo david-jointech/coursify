@@ -6,7 +6,9 @@
         res/values-v11/styles.xml on API 14+ devices.
     -->
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- API 14 theme customizations can go here. -->
     </style>
 
+    <style name="activated" parent="AppBaseTheme">
+        <item name="android:background">#fff</item>
+    </style>
 </resources>

@@ -1,8 +1,8 @@
 package com.example.coursify.view;
 
-import android.support.v4.app.Fragment;
+import android.support.v4.app.ListFragment;
 
-public abstract class MainActivityHoldingFragment extends Fragment {
+public abstract class MainActivityHoldingFragment extends ListFragment {
 	private MainActivity main;
 
 	public void setMain(MainActivity main) {
